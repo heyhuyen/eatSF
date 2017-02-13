@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/place_item_height">
+
+    <ImageView
+        android:id="@+id/ivPlacePhoto"
+        android:layout_width="@dimen/photo_thumb_size"
+        android:layout_height="@dimen/photo_thumb_size"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvPlaceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivPlacePhoto"
+        android:layout_toEndOf="@id/ivPlacePhoto"
+        tools:text="Place Name" />
+
+    <RatingBar
+        android:id="@+id/rbPlaceRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivPlacePhoto"
+        android:layout_toEndOf="@id/ivPlacePhoto"
+        android:layout_below="@id/tvPlaceName"
+        android:numStars="5"
+        android:stepSize="0.5"
+        style="@style/Widget.AppCompat.RatingBar.Small" />
+
+</RelativeLayout>
