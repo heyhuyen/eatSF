@@ -5,6 +5,7 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 
@@ -12,6 +13,7 @@ import java.util.ArrayList;
  * Model for basic place info.
  */
 
+@Parcel
 public class PlaceInfo {
     private static final String NAME_KEY = "name";
     private static final String PLACE_ID_KEY = "place_id";
@@ -23,12 +25,17 @@ public class PlaceInfo {
     private static final String LATITUDE_KEY = "lat";
     private static final String LONGITUDE_KEY = "lng";
 
-    private String name;
-    private double rating;
-    private String placeId;
-    private String photoRef;
-    private double latitude;
-    private double longitude;
+    // fields must be public for Parceler library
+    String name;
+    double rating;
+    String placeId;
+    String photoRef;
+    double latitude;
+    double longitude;
+
+    public PlaceInfo() {
+        // empty constructor needed by the Parceler library
+    }
 
     public PlaceInfo(JSONObject place) {
         super();

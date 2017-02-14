@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CollapsingToolbarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/collapsing_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+    android:fitsSystemWindows="true"
+    app:contentScrim="?attr/colorPrimary"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:expandedTitleTextAppearance="@style/collapsedAppBarText"
+    app:expandedTitleGravity="bottom|right"
+    app:expandedTitleMarginTop="40dp"
+    app:expandedTitleMarginStart="50dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:layout_collapseMode="parallax">
+
+        <ImageView
+            android:id="@+id/ivPlacePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/photo_toolbar_height"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_collapseMode="pin" />
+
+</android.support.design.widget.CollapsingToolbarLayout>
+

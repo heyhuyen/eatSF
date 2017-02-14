@@ -5,4 +5,5 @@
 
     <dimen name="photo_thumb_size">100dp</dimen>
     <dimen name="place_item_height">120dp</dimen>
+    <dimen name="photo_toolbar_height">200dp</dimen>
 </resources>
