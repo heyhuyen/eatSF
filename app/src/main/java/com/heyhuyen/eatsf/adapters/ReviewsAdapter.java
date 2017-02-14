@@ -19,7 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Adapter for reviews recycler view.
+ * Custom recycler view adapter for review items.
  */
 public class ReviewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

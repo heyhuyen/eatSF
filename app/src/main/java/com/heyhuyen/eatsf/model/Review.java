@@ -1,7 +1,5 @@
 package com.heyhuyen.eatsf.model;
 
-import static android.R.attr.author;
-
 import static com.heyhuyen.eatsf.activities.PlaceDetailActivity.RATING_KEY;
 
 import org.json.JSONArray;

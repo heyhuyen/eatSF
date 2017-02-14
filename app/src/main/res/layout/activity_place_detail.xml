@@ -40,7 +40,7 @@
                     tools:text="Place Name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/textLarge"/>
+                    android:textAppearance="@style/textLarge" />
 
                 <TextView
                     android:id="@+id/tvRating"
@@ -101,7 +101,7 @@
                     android:gravity="center_horizontal"
                     android:drawablePadding="@dimen/space"
                     android:textAppearance="@style/textMedium"
-                    android:text="@string/directions"/>
+                    android:text="@string/directions" />
 
                 <TextView
                     android:id="@+id/tvCall"
@@ -113,7 +113,7 @@
                     android:drawablePadding="@dimen/space"
                     android:textAppearance="@style/textMedium"
                     android:visibility="gone"
-                    android:text="@string/call"/>
+                    android:text="@string/call" />
 
                 <TextView
                     android:id="@+id/tvWebsite"
@@ -124,7 +124,7 @@
                     android:gravity="center_horizontal"
                     android:drawablePadding="@dimen/space"
                     android:textAppearance="@style/textMedium"
-                    android:text="@string/website"/>
+                    android:text="@string/website" />
 
             </LinearLayout>
 
@@ -137,7 +137,7 @@
                 android:layout_below="@id/llActions"
                 map:cameraZoom="16"
                 map:mapType="normal"
-                map:liteMode="true"/>
+                map:liteMode="true" />
 
             <!-- Info section with place details -->
             <LinearLayout
@@ -156,7 +156,7 @@
                     android:drawableLeft="@drawable/ic_location"
                     android:textAppearance="@style/textMedium"
                     style="@style/textDrawableRow"
-                    tools:text="Place Address"/>
+                    tools:text="Place Address" />
 
                 <TextView
                     android:id="@+id/tvPhoneNumber"
@@ -167,7 +167,7 @@
                     android:textAppearance="@style/textMedium"
                     style="@style/textDrawableRow"
                     android:visibility="gone"
-                    tools:text="Place Phone Number"/>
+                    tools:text="Place Phone Number" />
 
                 <LinearLayout
                     android:id="@+id/llHours"
@@ -182,7 +182,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="@dimen/activity_horizontal_margin"
-                        app:srcCompat="@drawable/ic_clock"/>
+                        app:srcCompat="@drawable/ic_clock" />
 
                     <TextView
                         android:id="@+id/tvOpenNow"
@@ -199,7 +199,7 @@
                         android:textAppearance="@style/textMedium"
                         android:layout_gravity="center"
                         android:visibility="gone"
-                        tools:text="Hours hours\nhours hours\nhours hours "/>
+                        tools:text="Hours hours\nhours hours\nhours hours " />
                 </LinearLayout>
 
                 <!-- Show tvWebAddress if available, otherwise use tvGoogleUrl -->
@@ -212,7 +212,7 @@
                     style="@style/textDrawableRow"
                     android:maxLines="1"
                     android:ellipsize="end"
-                    tools:text="Place Website http://www.reallylongwebadress.com"/>
+                    tools:text="Place Website http://www.reallylongwebadress.com" />
 
                 <TextView
                     android:id="@+id/tvGoogleUrl"
@@ -250,12 +250,12 @@
                     android:text="@string/reviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/textLarge"/>
+                    android:textAppearance="@style/textLarge" />
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/tvReviewsRating"
