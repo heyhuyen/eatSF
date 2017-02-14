@@ -13,8 +13,6 @@ import com.loopj.android.http.RequestParams;
 
 public class GoogleApiHttpClient {
 
-    private static AsyncHttpClient client = new AsyncHttpClient();
-
     private static final String GOOGLE_PLACES_SEARCH_API_KEY =
             "AIzaSyB-bpw0ollWA5AKpT11Y2CL2qPFs4kC_dk";
 
@@ -31,6 +29,8 @@ public class GoogleApiHttpClient {
     private static final int SF_RADIUS = 5633; // ~ 3.5 miles in meters
     private static final String SF_LAT_LONG = "37.7749,-122.4194";
     private static final String TYPE_RESTAURANT = "restaurant";
+
+    private static AsyncHttpClient client = new AsyncHttpClient();
 
     public static AsyncHttpClient getInstance() {
         return client;

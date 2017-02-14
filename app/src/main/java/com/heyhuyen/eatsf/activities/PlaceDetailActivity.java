@@ -148,6 +148,12 @@ public class PlaceDetailActivity extends AppCompatActivity implements OnMapReady
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place.getLatlng(), 16f));
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
     private void setupViewsWithInitialInfo() {
         getSupportActionBar().setTitle(place.getName());
         tvPlacename.setText(place.getName());

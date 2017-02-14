@@ -47,9 +47,6 @@ public class PlaceListFragment extends Fragment {
         return listFragment;
     }
 
-    // This event fires 1st, before creation of fragment or any views
-    // The onAttach method is called when the Fragment instance is associated with an Activity.
-    // This does not mean the Activity is fully initialized.
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -58,9 +55,6 @@ public class PlaceListFragment extends Fragment {
         }
     }
 
-    // This event fires 2nd, before views are created for the fragment
-    // The onCreate method is called when the Fragment instance is being created, or re-created.
-    // Use onCreate for any standard setup that does not require the activity to be fully created
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,8 +62,6 @@ public class PlaceListFragment extends Fragment {
         placeAdapter = new PlaceAdapter(places);
     }
 
-    // The onCreateView method is called when Fragment should create its View object hierarchy,
-    // either dynamically or via XML layout inflation.
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list, parent, false);
@@ -77,9 +69,6 @@ public class PlaceListFragment extends Fragment {
         return view;
     }
 
-    // This event is triggered soon after onCreateView().
-    // onViewCreated() is only called if the view returned from onCreateView() is non-null.
-    // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         rvPlaces.setAdapter(placeAdapter);
@@ -96,16 +85,12 @@ public class PlaceListFragment extends Fragment {
         populatePlaces();
     }
 
-    // This method is called when the fragment is no longer connected to the Activity
-    // Any references saved in onAttach should be nulled out here to prevent memory leaks.
     @Override
     public void onDetach() {
         super.onDetach();
         listener = null;
     }
 
-    // When binding a fragment in onCreateView, set the views to null in onDestroyView.
-    // ButterKnife returns an Unbinder on the initial binding that has an unbind method to do this automatically.
     @Override public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();

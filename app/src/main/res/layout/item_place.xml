@@ -18,6 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/ivPlacePhoto"
         android:layout_toEndOf="@id/ivPlacePhoto"
+        android:layout_marginStart="@dimen/space"
+        android:layout_marginLeft="@dimen/space"
         tools:text="Place Name" />
 
     <RatingBar
@@ -27,6 +29,9 @@
         android:layout_toRightOf="@id/ivPlacePhoto"
         android:layout_toEndOf="@id/ivPlacePhoto"
         android:layout_below="@id/tvPlaceName"
+        android:layout_marginStart="@dimen/space"
+        android:layout_marginLeft="@dimen/space"
+        android:layout_marginTop="@dimen/space"
         android:numStars="5"
         android:stepSize="0.5"
         style="@style/Widget.AppCompat.RatingBar.Small" />
