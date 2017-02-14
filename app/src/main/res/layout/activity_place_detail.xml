@@ -130,7 +130,7 @@
 
             <fragment
                 xmlns:map="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/mapView"
+                android:id="@+id/frPlaceMapView"
                 class="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/detail_map_height"
@@ -142,7 +142,7 @@
             <!-- Info section with place details -->
             <LinearLayout
                 android:id="@+id/llInfo"
-                android:layout_below="@id/mapView"
+                android:layout_below="@id/frPlaceMapView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"

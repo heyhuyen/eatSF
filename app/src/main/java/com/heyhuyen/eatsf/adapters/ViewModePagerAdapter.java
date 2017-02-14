@@ -8,7 +8,7 @@ import com.heyhuyen.eatsf.fragments.PlaceMapFragment;
 import com.heyhuyen.eatsf.fragments.PlaceListFragment;
 
 /**
- * ViewPager for places view modes.
+ * ViewPager adapter for places view modes.
  */
 
 public class ViewModePagerAdapter extends FragmentPagerAdapter {

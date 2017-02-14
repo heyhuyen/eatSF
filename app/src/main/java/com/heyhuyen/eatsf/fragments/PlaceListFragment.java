@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.heyhuyen.eatsf.R;
 import com.heyhuyen.eatsf.adapters.PlaceAdapter;
@@ -38,7 +37,7 @@ public class PlaceListFragment extends Fragment {
 
     @BindView(R.id.rvPlaces) RecyclerView rvPlaces;
 
-    PlacesFragmentListener listener;
+    private PlacesFragmentListener listener;
     private PlaceAdapter placeAdapter;
     private List<PlaceInfo> places;
     private Unbinder unbinder;
@@ -95,8 +94,6 @@ public class PlaceListFragment extends Fragment {
         );
 
         populatePlaces();
-        // TODO: swipe to refresh
-        // TODO: endless scrolling
     }
 
     // This method is called when the fragment is no longer connected to the Activity
@@ -131,8 +128,6 @@ public class PlaceListFragment extends Fragment {
             public void onFailure(int statusCode, Header[] headers, String res, Throwable t) {
                 // TODO: Show error
                 Log.e("ERROR", t.toString());
-                Toast.makeText(getActivity(), "error: failed populating places",
-                        Toast.LENGTH_SHORT).show();
             }
         });
     }

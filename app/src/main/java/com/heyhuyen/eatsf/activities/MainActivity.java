@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import com.heyhuyen.eatsf.R;
 import com.heyhuyen.eatsf.adapters.ViewModePagerAdapter;
+import com.heyhuyen.eatsf.fragments.PlaceCardFragment;
 import com.heyhuyen.eatsf.fragments.PlacesFragmentListener;
 import com.heyhuyen.eatsf.model.PlaceInfo;
 import org.parceler.Parcels;
@@ -21,14 +22,16 @@ import org.parceler.Parcels;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements PlacesFragmentListener {
+public class MainActivity extends AppCompatActivity implements PlacesFragmentListener,
+        PlaceCardFragment.PlaceCardFragmentListener {
+    public static final String PLACE_INFO_ARG = "placeInfo";
 
     @BindView(R.id.toolbar) Toolbar toolbar;
     @BindView(R.id.vpPager) ViewPager viewPager;
     private MenuItem miList;
     private MenuItem miMap;
 
-    private FragmentPagerAdapter adapterViewPager;
+    private FragmentPagerAdapter vpAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +40,8 @@ public class MainActivity extends AppCompatActivity implements PlacesFragmentLis
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
 
-        adapterViewPager = new ViewModePagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(adapterViewPager);
+        vpAdapter = new ViewModePagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(vpAdapter);
     }
 
     @Override
@@ -78,9 +81,19 @@ public class MainActivity extends AppCompatActivity implements PlacesFragmentLis
         miList.setVisible(mode != LIST_MODE);
     }
 
+    @Override
     public void onPlaceSelected(PlaceInfo place) {
+        launchPlaceDetailActivity(place);
+    }
+
+    @Override
+    public void onCardSelected(PlaceInfo place) {
+        launchPlaceDetailActivity(place);
+    }
+
+    private void launchPlaceDetailActivity(PlaceInfo place) {
         Intent intent = new Intent(MainActivity.this, PlaceDetailActivity.class);
-        intent.putExtra("placeInfo", Parcels.wrap(place));
+        intent.putExtra(PLACE_INFO_ARG, Parcels.wrap(place));
         startActivity(intent);
     }
 }

@@ -22,7 +22,7 @@ public class Review {
 
     public static final int INVALID_TIMESTAMP = -1;
 
-    // fields must be public
+    // fields must be public for Parceler
     String author;
     double rating;
     String text;

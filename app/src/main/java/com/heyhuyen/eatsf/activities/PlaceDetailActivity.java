@@ -1,5 +1,7 @@
 package com.heyhuyen.eatsf.activities;
 
+import static com.heyhuyen.eatsf.activities.MainActivity.PLACE_INFO_ARG;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -101,12 +103,12 @@ public class PlaceDetailActivity extends AppCompatActivity implements OnMapReady
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        place = Parcels.unwrap(getIntent().getParcelableExtra("placeInfo"));
+        place = Parcels.unwrap(getIntent().getParcelableExtra(PLACE_INFO_ARG));
         setupViewsWithInitialInfo();
 
         // setup map fragment
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapView);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.frPlaceMapView);
         mapFragment.getMapAsync(this);
 
         // fetch place data

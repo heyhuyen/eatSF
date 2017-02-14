@@ -38,6 +38,14 @@ public class PlaceInfo {
         // empty constructor needed by the Parceler library
     }
 
+    public PlaceInfo(String name, double rating, String placeId, String photoRef, LatLng latLng) {
+        this.name = name;
+        this.rating = rating;
+        this.placeId = placeId;
+        this.photoRef = photoRef;
+        this.latlng = latLng;
+    }
+
     public PlaceInfo(JSONObject place) {
         super();
         try {
