@@ -84,7 +84,7 @@ public class PlaceCardFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (!(context instanceof PlacesFragmentListener)) {
+        if (!(context instanceof PlaceCardFragmentListener)) {
             throw new RuntimeException("Activity should implement PlaceCardFragmentListener");
         }
         listener = (PlaceCardFragmentListener) context;

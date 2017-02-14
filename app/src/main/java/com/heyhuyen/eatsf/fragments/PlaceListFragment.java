@@ -50,9 +50,10 @@ public class PlaceListFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof Activity) {
-            listener = (PlacesFragmentListener) context;
+        if (!(context instanceof PlacesFragmentListener)) {
+            throw new RuntimeException("Activity should implement PlacesFragmentListener");
         }
+        listener = (PlacesFragmentListener) context;
     }
 
     @Override

@@ -93,7 +93,6 @@ public class PlaceDetailActivity extends AppCompatActivity implements OnMapReady
     @BindView(R.id.rvReviews) RecyclerView rvReviews;
 
     private PlaceInfo place;
-    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,13 +138,12 @@ public class PlaceDetailActivity extends AppCompatActivity implements OnMapReady
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        mMap.getUiSettings().setMapToolbarEnabled(false);
-        mMap.addMarker(new MarkerOptions()
+        googleMap.getUiSettings().setMapToolbarEnabled(false);
+        googleMap.addMarker(new MarkerOptions()
                 .position(place.getLatlng())
                 .title(place.getName())
-                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place.getLatlng(), 16f));
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place.getLatlng(), 16f));
     }
 
     @Override

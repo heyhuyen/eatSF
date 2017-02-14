@@ -57,8 +57,7 @@ public class PlaceMapFragment extends Fragment {
     private HashMap<String, Integer> markerMap; // marker id : place index
 
     public static PlaceMapFragment newInstance() {
-        PlaceMapFragment mapFragment = new PlaceMapFragment();
-        return mapFragment;
+        return new PlaceMapFragment();
     }
 
     @Override

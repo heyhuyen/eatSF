@@ -27,7 +27,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Build
 * Clone the repo
 * Import the project into Android Studio
-* Build and Run
+* Build and Run (optional: have Google Maps installed on your emulator or device for map intents from the detail view)
 
 ## License
 
