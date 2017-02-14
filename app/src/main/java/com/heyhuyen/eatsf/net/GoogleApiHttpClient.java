@@ -25,6 +25,7 @@ public class GoogleApiHttpClient {
     private static final String PLACE_PHOTO_URL_FORMAT =
             String.format("%s%s%s", BASE_URL, "photo?maxwidth=400&photoreference=%s&key=",
                     GOOGLE_PLACES_SEARCH_API_KEY);
+    public static final String PLACE_DETAILS_URL = String.format("%s%s", BASE_URL, "details/json?");
 
     // Hard coded search params for "Restaurants in SF"
     private static final int SF_RADIUS = 5633; // ~ 3.5 miles in meters
@@ -56,6 +57,13 @@ public class GoogleApiHttpClient {
         } else {
             return String.format(PLACE_PHOTO_URL_FORMAT, reference);
         }
+    }
+
+    public static void getPlaceDetails(String placeId, JsonHttpResponseHandler handler) {
+        RequestParams params = new RequestParams();
+        params.put("placeid", placeId);
+        params.put("key", GOOGLE_PLACES_SEARCH_API_KEY);
+        get(PLACE_DETAILS_URL, params, handler);
     }
 }
 

@@ -2,6 +2,8 @@ package com.heyhuyen.eatsf.model;
 
 import android.util.Log;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,8 +32,7 @@ public class PlaceInfo {
     double rating;
     String placeId;
     String photoRef;
-    double latitude;
-    double longitude;
+    LatLng latlng;
 
     public PlaceInfo() {
         // empty constructor needed by the Parceler library
@@ -53,8 +54,8 @@ public class PlaceInfo {
             }
             JSONObject geometry = place.getJSONObject(GEOMETRY_KEY);
             JSONObject location = geometry.getJSONObject(LOCATION_KEY);
-            this.latitude = location.getDouble(LATITUDE_KEY);
-            this.longitude = location.getDouble(LONGITUDE_KEY);
+            this.latlng = new LatLng(location.getDouble(LATITUDE_KEY),
+                    location.getDouble(LONGITUDE_KEY));
         } catch (JSONException e) {
             Log.d("Parse place failed", e.toString());
         }
@@ -94,12 +95,8 @@ public class PlaceInfo {
         return photoRef;
     }
 
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
+    public LatLng getLatlng() {
+        return latlng;
     }
 }
 

@@ -8,10 +8,33 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Text Styles -->
+    <style name="textLarge" parent="Base.TextAppearance.AppCompat.Subhead">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="textMediumBold" parent="Base.TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@color/secondaryText</item>
+    </style>
+
+    <style name="textMedium" parent="Base.TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/secondaryText</item>
+    </style>
+
+    <style name="textSmall" parent="Base.TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/secondaryText</item>
+    </style>
+
     <style name="collapsedAppBarText" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textDrawableRow">
+        <item name="android:drawablePadding">@dimen/activity_horizontal_margin</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
 </resources>

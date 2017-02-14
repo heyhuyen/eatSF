@@ -6,4 +6,6 @@
     <dimen name="photo_thumb_size">100dp</dimen>
     <dimen name="place_item_height">120dp</dimen>
     <dimen name="photo_toolbar_height">200dp</dimen>
+    <dimen name="detail_map_height">150dp</dimen>
+    <dimen name="space">8dp</dimen>
 </resources>

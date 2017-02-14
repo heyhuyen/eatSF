@@ -1,5 +1,17 @@
 <resources>
+    <!-- API keys -->
+    <string name="google_api_key">AIzaSyDkD4R2rlb7BRRwDOm3E1G4iRGGRbtBbe8</string>
+
     <string name="app_name">EatSF</string>
     <string name="option_map">Map</string>
     <string name="option_list">List</string>
+
+    <!-- Detail Activity -->
+    <string name="open">Open now</string>
+    <string name="closed">Closed now</string>
+    <string name="free">Free</string>
+    <string name="call">CALL</string>
+    <string name="directions">DIRECTIONS</string>
+    <string name="website">WEBSITE</string>
+    <string name="reviews">Reviews</string>
 </resources>
